@@ -33,9 +33,9 @@ Building a cloud SOC: detecting real-world attacks against an internet-exposed W
 - `detection-rules/` — Sentinel analytic rules
 - `playbooks/` — incident response procedures
 - `reports/` — analysis writeups
-- `screenshots/` — evidence and visualizations
+- `screenshots/` — evidence and visualisations
 - `notes/` — daily progress log
 
 ## Author
 
-Nishan Rajmulik — Aspiring Cyber Security Analyst, Sydney
+Nishan Rajmulik — Aspiring Cyber Security Analyst
