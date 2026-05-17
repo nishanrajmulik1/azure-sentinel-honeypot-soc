@@ -38,4 +38,4 @@ Building a cloud SOC: detecting real-world attacks against an internet-exposed W
 
 ## Author
 
-Nishan Rajmulik — Aspiring Cyber Security Analyst
+Nishan Rajmulik — Aspiring Cyber Security Engineer
