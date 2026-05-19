@@ -1,5 +1,11 @@
 # Architecture
 
+## Visual Overview
+
+![Azure Sentinel Honeypot SOC Architecture](./architecture-diagram.png)
+
+The architecture shows the complete data flow from public-internet attack traffic to Sentinel incidents and visualizations.
+
 ## Resource Group Overview
 
 All lab resources are deployed within a single Azure Resource Group (`rg-honeypot-soc`) located in the Australia East region. This single-RG design enables one-click teardown at the end of the experiment.
