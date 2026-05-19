@@ -136,7 +136,7 @@ Rules 2 and 3 (compromise indicators) never fired during the observation period,
 
 ## Author
 
-**Nishan Rajmulik**: Aspiring Cyber Security Engineer, Sydney.
+Built by **Nishan Rajmulik** as a self-directed SOC analyst learning project.
 Open to roles in detection engineering, SOC analyst (T1/T2), and security operations.
 
 🔗 [GitHub](https://github.com/nishanrajmulik1)
