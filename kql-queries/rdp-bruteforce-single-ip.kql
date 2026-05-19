@@ -1,0 +1,12 @@
+SecurityEvent
+| where EventID == 4625
+| where LogonType in (3, 10) // 3 = Network (NLA), 10 = RemoteInteractive (RDP)
+| where IpAddress != "-" and isnotempty( IpAddress)
+| summarize FailedAttempts = count(),
+            AccountsTargeted = dcount(Account),
+            TargetedAccounts = make_set(Account, 10)
+            by IpAddress, bin(TimeGenerated, 10m)
+| where FailedAttempts > 20
+| extend GeoInfo = geo_info_from_ip_address(IpAddress)
+| extend AttackerCountry = tostring(GeoInfo.country),
+         AttackerCity = tostring(GeoInfo.city)

@@ -1,0 +1,14 @@
+let failedAttempts = SecurityEvent
+| where EventID == 4625
+| where TimeGenerated > ago(1h)
+| where IpAddress != "-" and isnotempty(IpAddress)
+| summarize FailCount = count() by IpAddress, Account
+| where FailCount > 10;
+SecurityEvent
+| where EventID == 4624
+| where LogonType in (10, 3)  // RDP or Network logon
+| where IpAddress != "-" and isnotempty(IpAddress)
+| join kind=inner failedAttempts on IpAddress, Account
+| project TimeGenerated, Computer, Account, IpAddress, FailCount, LogonType
+| extend GeoInfo = geo_info_from_ip_address(IpAddress)
+| extend AttackerCountry = tostring(GeoInfo.country)

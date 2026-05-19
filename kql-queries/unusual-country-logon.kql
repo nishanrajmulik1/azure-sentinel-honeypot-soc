@@ -1,0 +1,9 @@
+SecurityEvent
+| where EventID == 4624
+| where LogonType == 10  // RDP
+| where IpAddress != "-" and isnotempty(IpAddress)
+| extend GeoInfo = geo_info_from_ip_address(IpAddress)
+| extend Country = tostring(GeoInfo.country),
+         City = tostring(GeoInfo.city)
+| where Country !in ("Australia", "")
+| project TimeGenerated, Account, IpAddress, Country, City, LogonType

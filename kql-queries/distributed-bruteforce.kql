@@ -1,0 +1,9 @@
+SecurityEvent
+| where EventID == 4625
+| where IpAddress != "-" and isnotempty(IpAddress)
+| summarize UniqueAttackerIPs = dcount(IpAddress),
+            TotalAttempts = count(),
+            SampleIPs = make_set(IpAddress, 10)
+            by Account, bin(TimeGenerated, 30m)
+| where UniqueAttackerIPs > 5
+| where TotalAttempts > 50
