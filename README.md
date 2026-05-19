@@ -57,7 +57,7 @@
 | 165.99.199.134 | Malaysia | 14,838 |
 | 138.94.140.190 | Mexico | 14,401 |
 
-> **Notable:** A single US-based IP (20.119.34.7) accounted for **33.3% of all attack traffic** — suggesting persistent, dedicated attacker infrastructure rather than opportunistic botnet activity.
+> **Notable:** A single US-based IP (20.119.34.7) accounted for **33.3% of all attack traffic**, suggesting persistent, dedicated attacker infrastructure rather than opportunistic botnet activity.
 
 ## Top 5 Targeted Usernames
 
@@ -115,7 +115,7 @@ A single IP (`20.119.34.7`, US-based) generated 33% of attack traffic. Most thre
 
 ### 4. The Sentinel Connector vs Generic DCR Pitfall
 
-The `SecurityEvent` table is populated only when the Data Collection Rule is created via the **Windows Security Events via AMA** connector page in Sentinel — *not* via the generic Monitor → Data Collection Rules path. Generic DCRs populate the `Event` table instead, which does not trigger Sentinel's built-in detections. This is poorly documented and has taken a lot of troubleshooting time. See `reports/final-analysis-report.md` for full details.
+The `SecurityEvent` table is populated only when the Data Collection Rule is created via the **Windows Security Events via AMA** connector page in Sentinel *not* via the generic Monitor → Data Collection Rules path. Generic DCRs populate the `Event` table instead, which does not trigger Sentinel's built-in detections. This is poorly documented and has taken a lot of troubleshooting time. See `reports/final-analysis-report.md` for full details.
 
 ### 5. The Value of Empty Rules
 
