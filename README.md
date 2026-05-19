@@ -2,7 +2,7 @@
 
 > A Windows 10 virtual machine deliberately exposed to the public internet on Microsoft Azure, with all Security events shipped to Microsoft Sentinel. Over approximately 72 hours, the honeypot captured **297,534 failed authentication attempts** from **28 unique IPs** across **14 countries** — including a single US-based IP responsible for one-third of all observed traffic.
 
-![Honeypot Attack Map](screenshots/crop/attack-map-world-crop.png)
+![Honeypot Attack Map](screenshots/attack-map-world-crop.jpg)
 
 ---
 
@@ -61,7 +61,7 @@
 
 ## Top 5 Targeted Usernames
 
-![Top Targeted Usernames](screenshots/crop/top-usernames-chart-crop.png)
+![Top Targeted Usernames](screenshots/top-usernames-chart-crop.jpg)
 
 | Username | Attempts |
 |---|---|
@@ -75,7 +75,7 @@
 
 ## Detection Rules Built
 
-![Incidents Queue](screenshots/crop/incidents-queue-crop.png)
+![Incidents Queue](screenshots/incidents-queue-crop.jpg)
 
 | # | Rule | MITRE ATT&CK | Severity | Result |
 |---|---|---|---|---|
